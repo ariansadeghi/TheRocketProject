@@ -1,0 +1,236 @@
+body {
+  background-color: rgb(28, 29, 34);
+  color: rgb(245, 245, 247);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+
+  height: 10vw;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#title {
+  display: flex; /*Set to flex so that the space
+   between "ROCKET" and "PROJECT disappears"*/
+  align-items: top;
+  text-decoration: none;
+
+  font-family: "Rubik", sans-serif;
+}
+#title-the {
+  font-weight: 300;
+  font-size: 2vw;
+
+  color: rgb(245, 245, 247);
+}
+#title-rocket {
+  font-weight: 700;
+  font-size: 5vw;
+
+  color: rgb(245, 245, 247);
+}
+#title-project {
+  font-weight: 300;
+  font-size: 5vw;
+
+  color: rgb(220, 220, 220);
+}
+#title-author {
+  font-weight: 300;
+  font-size: 1.5vw;
+
+  margin-top: 5.7%;
+
+  color: rgb(245, 245, 247);
+}
+
+#link-container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-evenly;
+  align-items: center;
+
+  font-family: "Rubik", sans-serif;
+}
+.link {
+  font-weight: 300;
+  font-size: 6mm; /*previously 25px*/
+  text-decoration: none;
+  color: rgb(220, 220, 220);
+
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  transition: background-color 0.5s ease, border 0.5s ease;
+}
+.link:hover {
+  background-color: rgb(41, 42, 49);
+}
+#play-link {
+  font-weight: 500;
+  color: rgb(255, 208, 0);
+}
+
+section {
+  margin-bottom: 4vw;
+}
+
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 9mm; /*previously 35px*/
+  text-align: center;
+
+  margin-bottom: 1.5vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+/*.text-visual-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: justify;
+  margin: 1vw 15vw 1vw 15vw;
+}
+.visual {
+  height: 27vw;
+  width: 48vw;
+  margin-left: 26vw;
+  margin-right: 26vw;
+}*/
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 6mm; /*previously 1.2vw*/
+  text-align: justify;
+
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 0vw;
+  margin-bottom: 0vw;
+}
+
+.text-container {
+  display: grid;
+  grid-template-columns: 84vw;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+.text-container > p {
+  width: 74vw;
+}
+.text-visual-container {
+  display: grid;
+  grid-template-columns: 42vw 42vw;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+.text-visual-container > p {
+  width: 32vw;
+}
+.visual {
+  height: 18vw;
+  width: 32vw;
+
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+@media screen and (max-width: 770px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    height: 15vw;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+  }
+  #title-the {
+    font-size: 3vw;
+  }
+  #title-rocket,
+  #title-project {
+    font-size: 7.5vw;
+  }
+  #title-author {
+    font-size: 2.25vw;
+  }
+  .link {
+    font-size: 4vw;
+  }
+
+  .visual {
+    width: 80vw;
+    height: 45vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+
+    order: 1;
+  }
+  .text-container > p {
+    font-size: 4mm; /*previously 20px*/
+    width: 80vw;
+    margin: 1vw;
+  }
+  .text-visual-container > p {
+    font-size: 4mm; /*previously 20px*/
+    width: 80vw;
+    margin: 1vw 1vw 3vw 1vw;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .heading {
+    font-size: 6mm; /*previously 35px*/
+  }
+  .text-container {
+    grid-template-columns: none;
+    grid-template-rows: auto;
+  }
+  .text-visual-container {
+    grid-template-columns: none;
+    grid-template-rows: auto auto;
+  }
+}
+@media screen and (max-width: 1400px) and (min-width: 771px) {
+  .visual {
+    width: 48vw;
+    height: 27vw;
+    margin-left: 17vw;
+    margin-right: 17vw;
+
+    order: 1;
+  }
+  .text-container > p {
+    font-size: 6mm; /*previously 20px*/
+    width: 65vw;
+    margin: 1vw 8.5vw 1vw 8.5vw;
+    width: 80vw;
+    margin: 1vw;
+  }
+  .text-visual-container > p {
+    font-size: 6mm; /*previously 20px*/
+    width: 65vw;
+    margin: 1vw 8.5vw 1vw 8.5vw;
+    width: 80vw;
+    margin: 1vw;
+  }
+}
+
+/*NOTE: change font sizes to vw*/
